@@ -31,7 +31,7 @@ namespace web_api
 
             var serviceProvider = services.BuildServiceProvider();
             var kvService = serviceProvider.GetService<IKeyVaultService>();
-            var connectionStringSecret = Configuration.GetValue<string>("AppSettings:ConnectionString");
+            var connectionStringSecret = Configuration.GetValue<string>("AppSettings:ConnectionStringName");
 
             var databaseType = Configuration.GetValue<string>("AppSettings:DatabaseType");
             if (kvService != null)
